@@ -8,4 +8,5 @@ jobs:
         uses: actions/checkout@v3
       - name: run tests
         run: mvn test
-      
+      - name: build project
+        run: mvn package
