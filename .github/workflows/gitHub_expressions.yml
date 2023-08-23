@@ -1,0 +1,7 @@
+name: Use GitHub Expressions
+on: workflow_dispatch
+jobs:
+  gitHub:
+    runs-on: ubuntu-latest
+    - name: print github context
+      run: echo "${{ toJSON(githab)}}"
