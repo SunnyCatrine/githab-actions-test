@@ -26,10 +26,10 @@ jobs:
       - name: get repository code
         uses: actions/checkout@v3
       - name: Let's cache
-          uses: actions/cache@v3
-          with:
-            path: mypath
-            key: ${{ runner.os }}-mypath
+        uses: actions/cache@v3
+        with:
+          path: mypath
+          key: ${{ runner.os }}-mypath
       - name: build project
         run: mvn package
   deploy_project_gibi:
