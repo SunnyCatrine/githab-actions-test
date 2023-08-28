@@ -10,7 +10,6 @@ jobs:
   test_project:
     strategy:
       matrix:
-        java-version: [13,15]
         os: [ubuntu-latest, windows-latest]
     runs-on: ${{matrix.os}}
     steps:
