@@ -8,7 +8,11 @@ on:
       - '.github/workflows/*'
 jobs:
   test_project:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java-version: [13,15]
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{matrix.os}}
     steps:
       - name: get repository code
         uses: actions/checkout@v3
