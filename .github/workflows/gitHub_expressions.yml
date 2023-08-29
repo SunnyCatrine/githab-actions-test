@@ -1,8 +1,15 @@
 name: Use GitHub Expressions
 on: workflow_dispatch
+env:
+  PEREMENNAYA: 123
+  SECRETNAYA_PEREMENNAYA: qwe
 jobs:
   gitHub_context:
     runs-on: ubuntu-latest
     steps:
       - name: print github context
         run: echo "${{ toJSON(github)}}"
+      - name: print env
+        run: |
+          echo "${{env.PEREMENNAYA}}"
+          echo "${{env.SECRETNAYA_PEREMENNAYA}}"
