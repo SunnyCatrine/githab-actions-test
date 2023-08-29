@@ -18,8 +18,8 @@ jobs:
       - name: Let's cache
         uses: actions/cache@v3
         with:
-          path: mypath
-          key: ${{ runner.os }}-mypath
+          path: /.m2
+          key: ${{ runner.os }}-m2
       - name: run tests
         run: mvn test
   build_project:
