@@ -2,7 +2,7 @@ name: Use GitHub Expressions
 on: workflow_dispatch
 env:
   PEREMENNAYA: 123
-  SECRETNAYA_PEREMENNAYA: qwe
+  SECRETNAYA_PEREMENNAYA: ${{secrets.MY_SECRET}}
 jobs:
   gitHub_context:
     runs-on: ubuntu-latest
